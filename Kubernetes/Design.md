@@ -29,15 +29,24 @@ You need a super-zookeeper who can:
 
 ```mermaid
 graph TD
-    HQ[Zoo HQ (Kubernetes Master/Control Plane)]
-    HQ -->|Schedules| ZOO1[Zoo 1 (Server/Node)]
-    HQ -->|Schedules| ZOO2[Zoo 2 (Server/Node)]
-    ZOO1 -->|Runs| BOX1[Box: Elephant]
-    ZOO1 -->|Runs| BOX2[Box: Lion]
-    ZOO2 -->|Runs| BOX3[Box: Giraffe]
-    HQ -- "Watches health, replaces if needed" --> ZOO1
-    HQ -- "Watches health, replaces if needed" --> ZOO2
-```
+    HQ["Zoo HQ (Kubernetes Master/Control Plane)"]
+    ZOO1["Zoo 1 (Server/Node)"]
+    ZOO2["Zoo 2 (Server/Node)"]
+    BOX1["Box: Elephant"]
+    BOX2["Box: Lion"]
+    BOX3["Box: Giraffe"]
+    ELEPHANT["Elephant App"]
+    LION["Lion App"]
+    GIRAFFE["Giraffe App"]
+
+    HQ --> ZOO1
+    HQ --> ZOO2
+    ZOO1 --> BOX1
+    ZOO1 --> BOX2
+    ZOO2 --> BOX3
+    BOX1 --> ELEPHANT
+    BOX2 --> LION
+    BOX3 --> GIRAFFE
 
 ---
 
