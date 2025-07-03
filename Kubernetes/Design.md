@@ -1,5 +1,3 @@
-Great idea! Here’s a professional outline and content for a `design-kubernetes.md` file, continuing the zoo analogy and providing both beginner-friendly and advanced, actionable content.
-
 ---
 
 # Kubernetes Design & Training Guide
@@ -47,6 +45,7 @@ graph TD
     BOX1 --> ELEPHANT
     BOX2 --> LION
     BOX3 --> GIRAFFE
+```
 
 ---
 
@@ -197,5 +196,3 @@ Master these basics and deep dives, and you’ll be ready to run the wildest, mo
 **For questions or more training, reach out to your DevOps team!**
 
 ---
-
-Let me know if you want this as a markdown file, want to add more advanced YAML, or want to further expand any section!
