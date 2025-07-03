@@ -4,7 +4,7 @@
 
 ---
 
-## GitHub for a Five-Year-Old (Zoo Analogy)
+## GitHub (Zoo Analogy)
 
 Imagine the zoo has a big library (GitHub) where every animal's story (code) is kept. There are robots (GitHub Actions) that help organize, clean, and even build new animal homes whenever a new story is added!
 
@@ -19,11 +19,19 @@ Imagine the zoo has a big library (GitHub) where every animal's story (code) is 
 
 ```mermaid
 graph TD
-    Zookeeper[Zookeeper (Dev)] -->|Writes| Story[Story (Code)]
-    Story -->|Shelved in| Library[Library (GitHub)]
-    Library -->|Robot sees new book| Robot[GitHub Action]
-    Robot -->|Builds| NewHome[New Animal Home]
-    Robot -->|Checks| Quality[Quality Check]
+    Zookeeper["Zookeeper (Dev)"]
+    Story["Story (Code)"]
+    Library["Library (GitHub)"]
+    Robot["Robot (GitHub Action)"]
+    NewHome["New Animal Home"]
+    Quality["Quality Check"]
+
+    Zookeeper -->|Writes| Story
+    Story -->|Shelved in| Library
+    Library -->|Robot sees new book| Robot
+    Robot -->|Builds| NewHome
+    Robot -->|Checks| Quality
+
 ```
 
 ---
