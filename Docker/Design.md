@@ -20,15 +20,21 @@ Below comes ton of code, which you do not have to remember
 
 ```mermaid
 graph TD
-    ZOO[Zoo (Your Computer/Server)]
-    ZOO -->|"Creates"| BOX1[Docker Box: Elephant]
-    ZOO -->|"Creates"| BOX2[Docker Box: Lion]
-    BOX1 --> ELEPHANT[Elephant App]
-    BOX2 --> LION[Lion App]
+    ZOO["Zoo (Your Computer/Server)"]
+    BOX1["Docker Box: Elephant"]
+    BOX2["Docker Box: Lion"]
+    ELEPHANT["Elephant App"]
+    LION["Lion App"]
+
+    ZOO -->|"Creates"| BOX1
+    ZOO -->|"Creates"| BOX2
+    BOX1 --> ELEPHANT
+    BOX2 --> LION
     BOX1 -- "Has own food, water, toys" --> ELEPHANT
     BOX2 -- "Has own food, water, toys" --> LION
     ZOO -- "Many boxes, no mess!" --> BOX1
     ZOO -- "Many boxes, no mess!" --> BOX2
+
 ```
 
 ---
