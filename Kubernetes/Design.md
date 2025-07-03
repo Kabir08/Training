@@ -1,10 +1,10 @@
----
 
 # Kubernetes Design & Training Guide
 
 **Objective:** Familiarity and mastery of Kubernetes for all team members
 
 ---
+
 
 ## Kubernetes (Zoo Analogy)
 
