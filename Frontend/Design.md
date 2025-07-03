@@ -4,7 +4,7 @@
 
 ---
 
-## Frontend for a Five-Year-Old (Zoo Analogy)
+## Frontend (Zoo Analogy)
 
 Imagine the zoo has a beautiful shop window (frontend) where visitors see animals, buy tickets, and get information. But the real work—feeding animals, keeping them safe, and handling money—happens in the back room (backend), where visitors can't go!
 
@@ -19,10 +19,16 @@ Imagine the zoo has a beautiful shop window (frontend) where visitors see animal
 
 ```mermaid
 graph TD
-    Visitor[Visitor] -->|Looks at| ShopWindow[Shop Window (Frontend)]
-    ShopWindow -->|Requests info| BackRoom[Back Room (Backend)]
+    Visitor["Visitor"]
+    ShopWindow["Shop Window (Frontend)"]
+    BackRoom["Back Room (Backend)"]
+    Animals["Animals (Data/Content)"]
+
+    Visitor -->|Looks at| ShopWindow
+    ShopWindow -->|Requests info| BackRoom
     BackRoom -->|Sends data| ShopWindow
-    ShopWindow -->|Shows| Animals[Animals (Data/Content)]
+    ShopWindow -->|Shows| Animals
+
 ```
 
 ---
