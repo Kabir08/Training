@@ -4,7 +4,7 @@
 
 ---
 
-## Dify for a Five-Year-Old (Zoo Analogy)
+## Dify (Zoo Analogy)
 
 Imagine the zoo has a conductor (Dify) who tells all the animals when to perform their tricks. The conductor makes sure the elephant dances, the lion roars, and the birds sing, all in the right order, so the show is perfect!
 
@@ -18,12 +18,20 @@ Imagine the zoo has a conductor (Dify) who tells all the animals when to perform
 
 ```mermaid
 graph TD
-    Conductor[Conductor (Dify)] -->|Signals| Elephant[Elephant (Task 1)]
-    Conductor -->|Signals| Lion[Lion (Task 2)]
-    Conductor -->|Signals| Birds[Birds (Task 3)]
-    Elephant -->|Performs| Show[Show (Workflow)]
+    Conductor["Conductor (Dify)"]
+    Elephant["Elephant (Task 1)"]
+    Lion["Lion (Task 2)"]
+    Birds["Birds (Task 3)"]
+    Show["Show (Workflow)"]
+
+    Conductor -->|Signals| Elephant
+    Conductor -->|Signals| Lion
+    Conductor -->|Signals| Birds
+
+    Elephant -->|Performs| Show
     Lion -->|Performs| Show
     Birds -->|Performs| Show
+
 ```
 
 ---
