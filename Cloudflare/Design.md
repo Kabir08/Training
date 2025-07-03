@@ -4,7 +4,7 @@
 
 ---
 
-## Cloudflare for a Five-Year-Old (Zoo Analogy)
+## Cloudflare (Zoo Analogy)
 
 Imagine your zoo has a super-fast security guard and traffic controller (Cloudflare) at the gate. The guard checks every visitor, keeps out troublemakers, and makes sure everyone gets to the right animal quickly—even if there's a big crowd!
 
@@ -19,11 +19,18 @@ Imagine your zoo has a super-fast security guard and traffic controller (Cloudfl
 
 ```mermaid
 graph TD
-    Visitor[Visitor] -->|Arrives| Gate[Cloudflare Gate]
-    Gate -->|Checks| Ticket[Ticket (DNS/SSL)]
-    Gate -->|Routes| Elephant[Elephant App]
-    Gate -->|Routes| Lion[Lion App]
-    Gate -->|Blocks| Trouble[Bad Visitor]
+    Visitor[Visitor] --> Gate[Cloudflare Gate]
+    Gate --> Ticket["Ticket (DNS/SSL)"]
+    Gate --> Elephant[Elephant App]
+    Gate --> Lion[Lion App]
+    Gate --> Trouble[Bad Visitor]
+
+
+    Visitor --> Gate
+    Gate --> Ticket
+    Gate --> Elephant
+    Gate --> Lion
+    Gate --> Trouble
 ```
 
 ---
